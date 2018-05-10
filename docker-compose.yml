@@ -1,0 +1,13 @@
+version: '2'
+services:
+  scrapyd:
+    image: sprasia/scrapyd:latest
+    ports:
+      - 6800:6800
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - scrapyd:/var/lib/scrapyd/
+
+volumes:
+  scrapyd:
